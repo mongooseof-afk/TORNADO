@@ -1,0 +1,10 @@
+node_modules/
+**/node_modules/
+resources/local-services/node_modules/
+resources/app.asar
+*.exe
+*.dll
+*.pak
+*.bin
+*.dat
+locales/

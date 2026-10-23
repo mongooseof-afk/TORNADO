@@ -1,0 +1,9 @@
+[
+  { "city": "All Centers", "id": "" , "value": "" },
+  { "city": "Tangier", "id": "8457a52e-98be-4860-88fc-2ce11b80a75e" , "value": "Tangier" },
+  { "city": "Tetouan", "id": "889689b5-1099-4795-ac19-c9263da23252" , "value": "Tetouan" },
+  { "city": "Casablanca", "id": "60d2df036755e8de168d8db7" , "value": "Casablanca" },
+  { "city": "Rabat", "id": "8d780684-1524-4bda-b138-7c71a8591944" , "value": "Rabat" },
+  { "city": "Nador", "id": "0566245a-7ba1-4b5a-b03b-3dd33e051f46" , "value": "Nador" },
+  { "city": "Agadir", "id": "138660df-f645-488f-8458-97186b17c7f9" , "value": "Agadir" }
+]

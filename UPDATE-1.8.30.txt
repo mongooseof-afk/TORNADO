@@ -1,0 +1,16 @@
+Tornado Launcher 1.8.30 / Spain 1.8.49
+
+Launcher:
+OTHERS has two independent fields: Delay Reload Error Occurred (seconds), and Delay Reload in Error (seconds) for 502/503/Application Temporarily Unavailable. Both start empty, placeholder 1-120; empty means 2 seconds.
+The existing Auto Reload Error Occurred and Auto Reload Site Errors switches remain independent and start OFF with a fresh launcher process.
+Each controller has a separate delay input, settings API and write queue. Changing one option never changes the other option or delay. Initial asynchronous reads cannot overwrite a user edit. Loading/saving failures are reported.
+The Spain extension's fallback delay is now consistently 2 seconds.
+
+Time Left: diagnostic update, NOT a confirmed live-server fix.
+The previous 'Server busy' message also covered failed connections, HTTP 5xx responses and missing deadline data. These now retain their specific reason during retry. Actual HTTP 429 is identified separately and Retry-After is still respected. An older cached cooldown with no status is labeled 'Waiting before retry'. A successful response clears an obsolete cooldown.
+Comparison of the supplied JEXI source found random X-Forwarded-For values and rapid retries on 429. Those behaviors were not copied. We have not captured the user's failing live request and cannot guarantee that this release resolves live rate limiting.
+
+Local checks passed: independent settings APIs and delays, input placeholders/default/bounds, delayed initial reads, rapid queued changes, native launcher/country initialization, error reload timing/OFF/recovery, background clock transport and Retry-After, countdown parsing and pre-slot recovery, and distinct retry diagnostics. No live booking or authenticated BLS clock request was performed.
+
+Close the old launcher, launch 1.8.30, select Spain and enable the required reload switch. Load/reload Spain 1.8.49 and refresh the BLS page once.
+Portugal, APK, accounts and proxy settings are unchanged.

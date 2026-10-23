@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Tornado</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="src/country-ui.css">
+<link rel="stylesheet" href="src/spain-new.css"><link rel="stylesheet" href="src/mauritania.css">
+<link rel="stylesheet" href="src/launcher-theme.css">
+<script src="src/launcher-theme-boot.js"></script>
+</head>
+<body>
+  <div id="auth-section" class="content-section active">
+    <div class="auth-container">
+      <div id="loginOverlay" class="loader-overlay">
+        <div class="loader-content">
+          <div class="loader"></div>
+        </div>
+      </div>
+      <h2></h2>
+      <div class="auth-form">
+        <div class="form-group">
+          <label for="token">Token</label>
+          <input type="text" id="token" placeholder="Enter your token">
+        </div>
+        <button id="authButton" class="auth-btn">Connect</button>
+        <div id="authError" class="auth-error"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="app-content">
+    <!-- HOME TAP -->
+    <div id="home-section" class="content-section"><div style="text-align:center;margin:12px 0"><img src="src/img/tornado.png" alt="Tornado" width="128" height="128" style="border-radius:12px"></div>
+      <div class="tornado-countries" role="group" aria-label="Country workspace"><button class="tornado-country-card" type="button" data-country-choice="Mauritania" aria-pressed="false"><svg viewBox="0 0 60 40" aria-label="Mauritania flag" role="img"><path fill="#006233" d="M0 0h60v40H0z"/><path fill="#d01c1f" d="M0 0h60v6H0zm0 34h60v6H0z"/><path fill="#ffd700" d="M18 18a12 12 0 0 0 24 0 12 9 0 0 1-24 0"/><path fill="#ffd700" d="m30 10 1.5 4.5h4.7l-3.8 2.8 1.5 4.5-3.9-2.8-3.9 2.8 1.5-4.5-3.8-2.8h4.7z"/></svg><strong>Mauritania</strong><small>0 saved accounts</small></button><button class="tornado-country-card" type="button" data-country-choice="SpainNew" aria-pressed="false"><svg viewBox="0 0 60 40" role="img" aria-label="Spain flag"><path fill="#aa151b" d="M0 0h60v40H0z"/><path fill="#f1bf00" d="M0 10h60v20H0z"/><g transform="translate(16 14)"><path fill="#bd2532" stroke="#b38824" stroke-width="1.2" d="M-4 0h8v8c0 3-4 4-4 4s-4-1-4-4z"/><path fill="#f6d46c" d="M-3 1h3v4h-3zm3 4h3v4H0z"/><path fill="#b38824" d="M-5-3h10v2H-5zm1-3 2 2 2-3 2 3 2-2v3h-8z"/></g></svg><strong>SPAIN NEW</strong><small>0 saved accounts</small></button><button class="tornado-country-card" type="button" data-country-choice="Portugal" aria-pressed="false"><svg viewBox="0 0 60 40" role="img" aria-label="Portugal flag"><path fill="#006600" d="M0 0h24v40H0z"/><path fill="#e31b23" d="M24 0h36v40H24z"/><g transform="translate(24 20)"><circle r="9" fill="none" stroke="#ffce00" stroke-width="1.6"/><ellipse rx="9" ry="3.5" fill="none" stroke="#ffce00" stroke-width="1"/><path d="M0-9v18M-7-6 7 6M-7 6 7-6" stroke="#ffce00"/><path d="M-5-6H5v8c0 4-5 6-5 6s-5-2-5-6z" fill="#fff" stroke="#e31b23" stroke-width="2"/><g fill="#0063a5"><path d="M-1-4h2v3h-2zM-3-1h2v3h-2zM1-1h2v3H1zM-1 2h2v3h-2z"/></g></g></svg><strong>Portugal</strong><small>0 saved accounts</small></button></div><p id="tornado-country-error" role="status"></p>
+      <div class="status-panel">
+        <div class="status-indicator">
+          <div id="statusDot" class="status-dot disconnected"></div>
+          <span id="statusText" class="status-text">Connecting...</span>
+        </div>
+        <div id="userCount" class="user-count">Profiles : 0</div>
+      </div>
+      <div id="welcomePanel" class="welcome-panel">
+        <div id="welcomeMessage" class="welcome-message"></div>
+        <div id="expireDate" class="expire-date"></div>
+        <div id="expireDateInNum" class="expire-date-in-num"></div>
+      </div>
+    </div>
+    <!-- SETTINGS TAP -->
+    <div id="settings-section" class="content-section">
+      <div class="controls">
+        <button id="submitBtn" class="control-btn btn-login">Submit Slot</button>
+        <button id="loginBtn" class="control-btn btn-submit">Go Login</button>
+        <button id="startBtn" class="control-btn btn-start">Start New App</button>
+        <button id="reloginBtn" class="control-btn btn-relogin">Relogin</button>
+        <button id="changeProxyBtn" class="control-btn btn-proxy">Change Proxy</button>
+        <button id="changeIpBtn" class="control-btn btn-stop">Change IP</button>
+        <button id="superRefreshBtn" class="control-btn" style="background:#087f8c">Super Refresh</button>
+        <button id="changeDaysBtn" class="control-btn" style="background:#c66b12">Change Days</button>
+        <button id="clearDaysBtn" class="control-btn" style="background:#64748b">Clear Days</button>
+          <button id="stopInVisaTypeBtn" class="control-btn" style="background:#b84042">Submit Visatype</button>
+        <button id="submitPreSlotBtn" class="control-btn" style="background:#7054b3">Submit Pre Slot</button>
+        <button id="reloadSessionBtn" class="control-btn" style="background:#036a74">Reload Session</button>
+      </div>
+      <p id="slotActionStatus" role="status" style="font-size:12px;color:#cbd5e1;line-height:1.4;margin:8px 0"></p>
+      <div class="automation-panel tab-container">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="primary">Primary</button>
+          <button class="tab-btn" data-tab="secondary">Secondary</button>
+          <button class="tab-btn" data-tab="advanced">Advanced</button>
+          <button class="tab-btn" data-tab="others">Others</button>
+        </div>
+
+        <!-- PRIMARY -->
+        <div class="tab-content active" id="primary">
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Login</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoLoginToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Captcha</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoCaptchaToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Visa Type</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoVTToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Submit Slot</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoSubmitSlot">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Retry Calendar</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoRedirectToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Retry Calendar /Sec</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoSlotSecToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Proxy Rotation</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoProxyRotate">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Auto Reload Error Occurred</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoReloadErrorToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item site-error-spain"><span class="toggle-label">Auto Reload Site Errors</span><label class="toggle-switch"><input type="checkbox" id="siteErrorReloadToggle"><span class="toggle-slider"></span></label></div><div class="toggle-item"><span class="toggle-label">Minute Distribution</span><label class="toggle-switch"><input type="checkbox" id="autoDivideMinutesToggle"><span class="toggle-slider"></span></label></div>
+        </div>
+        <!-- SECONDARY -->
+        <div class="tab-content" id="secondary">
+          <div class="toggle-item">
+            <span class="toggle-label">Signal Submit - Calendrie</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoSubmitSlotSignal">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Signal Submit - Retry Calendrie</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoSubmitRetryCalendrieSignal">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Signal Submit - Visatype</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoSubmitVisatypeSignal">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Signal Alert 🔔</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="autoAlert">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="toggle-item">
+            <span class="toggle-label">Dark Mode Launcher</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="darkModeToggle">
+              <span class="toggle-slider"></span>
+            </label>
+          </div>
+          <div class="recaptcha-group">
+            <input type="text" id="recaptchaToken" placeholder=" " autocomplete="off">
+            <label for="recaptchaToken">Recaptcha Token</label>
+            <button type="button" id="refreshRecaptcha" class="recaptcha-refresh">
+              <i class="fas fa-sync-alt"></i>
+            </button>
+          </div>
+        </div>
+        <!-- ADVANCED -->
+        <div class="tab-content" id="advanced">
+          <br>
+          <div class="filters-div">
+            <div class="filters">
+              <div class="form-group">
+                <select id="center" class="filter" required>
+                  <option value=""></option>
+                  <option value="Casablanca">Casablanca</option>
+                  <option value="Tangier">Tangier</option>
+                  <option value="Nador">Nador</option>
+                  <option value="Agadir">Agadir</option>
+                  <option value="Rabat">Rabat</option>
+                  <option value="Tetouan">Tetouan</option>
+                </select>
+                <label for="center">Center</label>
+              </div>
+
+              <div class="form-group">
+                <select id="visaType" class="filter" required>
+                  <option value=""></option>
+                  <option value="Schengen Visa">Schengen Visa</option>
+                  <option value="Casa 1">Casa 1</option>
+                  <option value="Casa 2">Casa 2</option>
+                  <option value="Student Visa">Student Visa</option>
+                  <option value="National Visa">National Visa</option>
+                  <option value="Work Visa">Work Visa</option>
+                  <option value="Family Reunification Visa">Family Reunification Visa</option>
+                  <option value="Schengen Visa Prior 2023">Schengen Visa Prior 2023</option>
+                  <option value="Short Stay Visa">Short Stay Visa</option>
+                </select>
+                <label for="visaType">Visa Type</label>
+              </div>
+            </div>
+
+            <div class="filters">
+              <div class="form-group">
+                <select id="category" class="filter" required>
+                  <option value=""></option>
+                  <option value="Normal">Normal</option>
+                  <option value="Premium">Premium</option>
+                  <option value="Prime Time">Prime Time</option>
+                </select>
+                <label for="category">Category</label>
+              </div>
+
+              <div class="form-group">
+                <select id="members" class="filter" required>
+                  <option value=""></option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                </select>
+                <label for="members">Members</label>
+              </div>
+
+              <div class="log-controls">
+                <button id="updateData" class="control-btn btn-submit">Update</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- OTHERS -->
+        <div class="tab-content" id="others">
+          <br>
+          <div class="form-group">
+            <select id="onMaxAttemptAction" class="filter" required>
+              <option value=""></option>
+              <option value="New App">New App</option>
+              <option value="Switch Proxy">Switch Proxy</option>
+            </select>
+            <label for="onMaxAttemptAction">On Max Attempts :</label>
+          </div>
+
+          <div class="form-group">
+            <select id="getProxyFrom" class="filter" required>
+              <option value=""></option>
+              <option value="List">List</option>
+              <option value="Launcher">Launcher</option>
+            </select>
+            <label for="getProxyFrom">Proxy From :</label>
+          </div>
+
+          <div class="input-item">
+            <label>Delay (seconds) : </label>
+            <input type="number" id="delayOnSecRc" min="1" max="120" placeholder="1-120">
+          </div>
+          <div class="input-item">
+            <label>Attemps (value) : </label>
+            <input type="number" id="maxAttemptsRc" min="1" max="999" placeholder="1-999">
+          </div>
+          
+<div class="input-item">
+            <label for="errorReloadDelaySeconds">Delay Reload Error Occurred (seconds) :</label>
+            <input type="number" id="errorReloadDelaySeconds" min="1" max="120" step="1" placeholder="1-120"><p id="errorOccurredReloadStatus" role="status"></p>
+          </div>
+<div class="input-item">
+<label for="siteErrorReloadDelaySeconds">Auto Refresh On Errors (seconds) :</label>
+<input type="number" id="siteErrorReloadDelaySeconds" min="1" max="120" step="1" placeholder="1-120">
+<p id="siteErrorReloadStatus" role="status"></p>
+</div>
+
+        </div>
+      </div>
+    </div>
+    <!-- Timing TAB -->
+    <div id="timing-section" class="content-section">
+      <div class="automation-panel">
+        <div>
+          <h3>Slot Selection Scheduler /delay</h3>
+          <input type="time" id="start-time" step="0.001">
+          <input type="number" name="start-time-delay" id="start-time-delay" placeholder="delay in ms" min="1" step="1" inputmode="numeric" pattern="[0-9]*">
+          <button id="update-slot-values" class="control-btn btn-submit">Set</button>
+          <button id="stop-slot" class="control-btn btn-submit">Stop</button>
+        </div>
+
+        <div>
+          <h3>Retry Calendar Scheduler /delay</h3>
+          <input type="time" id="start-time-r" step="0.001"><br>
+          <input type="number" name="start-time-delay-r" id="start-time-delay-r" placeholder="delay in ms" min="1" step="1" inputmode="numeric" pattern="[0-9]*"><br>
+          <button id="update-r-values" class="control-btn btn-submit">Set</button>
+          <button id="stop-r" class="control-btn btn-submit">Stop</button>
+        </div>
+
+        <div>
+          <h3>Change IP Scheduler /delay</h3>
+          <input type="time" id="start-time-action" step="0.001"><br>
+          <input type="number" name="start-time-delay-action" id="start-time-delay-action" placeholder="delay in ms" min="0" step="1" inputmode="numeric" pattern="[0-9]*"><br>
+          <button id="update-action-values" class="control-btn btn-submit">Set</button>
+          <button id="stop-action" class="control-btn btn-submit">Stop</button>
+        </div>
+
+        <div>
+          <h3>Re-Login Scheduler /delay</h3>
+          <input type="time" id="start-time-relogin" step="0.001"><br>
+          <input type="number" name="start-time-delay-relogin" id="start-time-delay-relogin" placeholder="delay in ms" min="0" step="1" inputmode="numeric" pattern="[0-9]*"><br>
+          <button id="update-relogin-values" class="control-btn btn-submit">Set</button>
+          <button id="stop-relogin" class="control-btn btn-submit">Stop</button>
+        </div>
+      </div>
+    </div>
+    <!-- LOGS TAB -->
+    <div id="logs-section" class="content-section">
+      <div class="filters-div">
+        <div class="filters">
+          <div class="form-group">
+            <select id="visaType-log" class="filter">
+              <option value=""></option>
+              <option value="Schengen Visa">Schengen Visa</option>
+              <option value="Casa 1">Casa 1</option>
+              <option value="Casa 2">Casa 2</option>
+              <option value="Student Visa">Student Visa</option>
+              <option value="National Visa">National Visa</option>
+              <option value="Work Visa">Work Visa</option>
+              <option value="Family Reunification Visa">Family Reunification Visa</option>
+              <option value="Schengen Visa – With Prior Schengen Visa 2023">Schengen Visa – With Prior Schengen Visa 2023</option>
+              <option value="Short Stay Visa">Short Stay Visa</option>
+            </select>
+            <label for="visaType">Visa Type</label>
+          </div>
+          <div class="form-group">
+            <select id="center-log" class="filter">
+              <option value=""></option>
+              <option value="Casablanca">Casablanca</option>
+              <option value="Tangier">Tangier</option>
+              <option value="Nador">Nador</option>
+              <option value="Agadir">Agadir</option>
+              <option value="Rabat">Rabat</option>
+              <option value="Tetouan">Tetouan</option>
+            </select>
+            <label for="center">Center</label>
+          </div>
+        </div>
+      </div>
+      <div class="log-panel">
+        <div id="activityLog"></div>
+      </div>
+    </div>
+    <!-- MANAGE TAB -->
+    <div id="manage-section" class="content-section">
+      <div class="tab-container">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="accounts">Accounts</button>
+          <button class="tab-btn" data-tab="clients">Clients</button>
+          <button class="tab-btn" data-tab="proxy">Proxy</button>
+        </div>
+        <br>
+        <!-- PRIMARY -->
+          <div class="tab-content active" id="accounts">
+            <div class="manage-actions">
+              <button id="add-account" title="Add New Account">
+                <i class="fas fa-user-plus"></i>
+              </button>
+              <button id="update-accounts" title="Update Accounts" style="display:none">
+                <i class="fas fa-arrows-rotate"></i>
+              </button>
+              <button id="importAccountsBtn" title="Import Accounts">
+                <i class="fas fa-file-import"></i>
+              </button>
+              <input type="file" id="import-accounts" style="display:none" />
+              <button id="export-accounts" title="Export Accounts">
+                <i class="fas fa-file-export"></i>
+              </button>
+              <button id="OTPCheck" title="Check OTP">
+                <i class="fas fa-envelope"></i>
+              </button>
+              <button id="delete-accounts" title="Delete All Accounts">
+                <i class="fas fa-trash"></i>
+              </button>
+            </div>
+          <!-- ACCOUNT POPUP -->
+          <div id="addAccountPopup" class="popup-overlay">
+            <div class="popup-content">
+              <form id="addAccountForm">
+
+                <div class="form-group">
+                  <input type="text" name="name" required />
+                  <label>Name</label>
+                </div>
+
+                <div class="form-group">
+                  <input type="email" name="email" required />
+                  <label>Email</label>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="password" required />
+                  <label>Password</label>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" name="app-password" />
+                  <label>App Password (Gmail)</label>
+                </div>
+
+                <div class="popup-actions">
+                  <button type="submit" class="control-btn btn-submit">Save</button>
+                  <button type="button" id="cancelAccountPopup" class="control-btn btn-relogin">
+                    Cancel
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+          <div id="accounts-container"></div>
+        </div>
+        <!-- Clients -->
+        <div class="tab-content" id="clients">
+          <div class="manage-actions">
+            <button id="add-client" title="Add New Client">
+              <i class="fas fa-user-plus"></i>
+            </button>
+            <button id="update-clients" title="Update Clients" style="display:none">
+              <i class="fas fa-arrows-rotate"></i>
+            </button>
+            <button id="importClientsBtn" title="Import Clients">
+              <i class="fas fa-file-import"></i>
+            </button>
+            <input type="file" id="import-clients" style="display:none" />
+            <button id="export-clients" title="Export Clients">
+              <i class="fas fa-file-export"></i>
+            </button>
+            <button id="delete-clients" title="Delete All Clients">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+
+          <div id="addClientPopup" class="popup-overlay">
+            <div class="popup-content">
+              <form id="addClientForm">
+                <div class="form-group">
+                  <input type="text" id="firstName" name="firstName" placeholder=" " required />
+                  <label for="firstName">First Name</label>
+                </div>
+
+                <div class="form-group">
+                  <input type="text" id="lastName" name="lastName" placeholder=" " required />
+                  <label for="lastName">Last Name</label>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="passportNumber" name="passportNumber" placeholder=" " required />
+                  <label for="passportNumber">Passport Number</label>
+                </div>
+                <div class="form-group">
+                  <input type="date" id="dob" name="dob" placeholder=" " required />
+                  <label for="dob">Date Of Birth</label>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <select id="city" name="city" placeholder=" ">
+                      <option value="" disabled selected hidden></option>
+                      <option value="Casablanca">Casablanca</option>
+                      <option value="Nador">Nador</option>
+                      <option value="Rabat">Rabat</option>
+                      <option value="Tangier">Tangier</option>
+                      <option value="Tetouan">Tetouan</option>
+                      <option value="Agadir">Agadir</option>
+                    </select>
+                    <label for="city">City</label>
+                  </div>
+
+                  <div class="form-group">
+                    <select id="visaType" name="visaType" placeholder=" ">
+                      <option value="" disabled selected hidden></option>
+                      <option value="Schengen Visa">Schengen Visa</option>
+                      <option value="National Visa">National Visa</option>
+                    </select>
+                    <label for="visaType">Visa Type</label>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <select id="gender" name="gender" placeholder=" ">
+                      <option value="" disabled selected hidden></option>
+                      <option value="male">male</option>
+                      <option value="female">female</option>
+                    </select>
+                    <label for="gender">Gender</label>
+                  </div>
+                  <div class="form-group">
+                    <select id="relationship" name="relationship" placeholder=" ">
+                      <option value="" disabled selected hidden></option>
+                      <option value="Father">Father</option>
+                      <option value="Mother">Mother</option>
+                      <option value="Husband">Husband</option>
+                      <option value="Wife">Wife</option>
+                      <option value="Daughter">Daughter</option>
+                      <option value="Son">Son</option>
+                      <option value="Sister">Sister</option>
+                    </select>
+                    <label for="relationship">Relationship</label>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <input type="date" id="issueDate" name="issueDate" placeholder=" " required />
+                    <label for="issueDate">Issue Date</label>
+                  </div>
+
+                  <div class="form-group">
+                    <input type="date" id="expiryDate" name="expiryDate" placeholder=" " required />
+                    <label for="expiryDate">Expiry Date</label>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="avatar" name="avatar" placeholder=" " />
+                  <label for="avatar">Picture Url</label>
+                </div>
+
+                <div class="popup-actions">
+                  <button type="submit" class="control-btn btn-submit">Save</button>
+                  <button type="button" id="cancelPopup" class="control-btn btn-relogin">Cancel</button>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div id="clients-container"></div>
+        </div>
+        <!-- Proxy -->
+        <div class="tab-content" id="proxy">
+          <textarea id="proxies-input" placeholder="ip:port:user:pass"></textarea>
+          <div class="proxy-info">
+            <div id="proxy-count">0 proxies</div>
+            <div class="spacer"></div>
+            <button id="save-proxies">Save</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="deleteConfirmPopup" class="popup-overlay">
+      <div class="popup-content">
+        <h3>Confirm Deletion</h3>
+        <div class="delete-client-info" id="deleteClientName"></div>
+        <div class="delete-popup-buttons">
+          <button id="cancelDelete">Cancel</button>
+          <button id="confirmDelete">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <div class="nav-item" data-section="home" title="Home">
+        <i class="fas fa-home"></i>
+      </div>
+      <div class="nav-item" data-section="logs" title="Logs">
+        <i class="fa-solid fa-table-list"></i>
+      </div>
+      <div class="nav-item" data-section="settings" title="Settings">
+        <i class="fa-solid fa-gear"></i>
+      </div>
+      <div class="nav-item" data-section="timing" title="Timing">
+        <i class="fa-solid fa-calendar"></i>
+      </div>
+      <div class="nav-item" data-section="manage" title="Manage">
+        <i class="fa-regular fa-pen-to-square"></i>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/country-storage.js"></script>
+  <script src="src/startup-options-ui.js"></script>
+  <script src="src/recaptcha-settings-ui.js"></script>
+  <script src="src/patch.js"></script>
+  <script src="src/patch_captchaai.js"></script>
+  <script src="src/index.js"></script>
+  <script src="src/manage.js"></script>
+<script src="src/slot-actions-ui.js"></script>
+<script src="src/tornado-features-ui.js"></script>
+<script src="src/tornado-error-reload-ui.js"></script>
+<script src="src/minute-divider-ui.js"></script>
+<script src="src/country-ui.js"></script>
+<script src="src/site-error-ui.js"></script>
+<script src="src/local-services-ui.js"></script>
+<script src="src/spain-new-core.js"></script>
+<script src="src/spain-new-ui.js"></script><script src="src/mauritania-core.js"></script><script src="src/mauritania-ui.js"></script>
+<script src="src/launcher-theme.js"></script>
+<script src="src/portal-assets-ui.js"></script></body>
+</html>

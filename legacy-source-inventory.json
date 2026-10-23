@@ -1,0 +1,160 @@
+{
+  "version": "1.8.34",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 28852,
+      "lines": 595
+    },
+    {
+      "file": "src/index.js",
+      "bytes": 1299694,
+      "lines": 1
+    },
+    {
+      "file": "src/main.js",
+      "bytes": 29081,
+      "lines": 812
+    },
+    {
+      "file": "src/manage.js",
+      "bytes": 402955,
+      "lines": 1
+    },
+    {
+      "file": "src/ocr_captchaai.js",
+      "bytes": 4316,
+      "lines": 122
+    },
+    {
+      "file": "src/otp.js",
+      "bytes": 5002,
+      "lines": 194
+    },
+    {
+      "file": "src/patch_captchaai.js",
+      "bytes": 4774,
+      "lines": 110
+    },
+    {
+      "file": "src/patch.js",
+      "bytes": 3353,
+      "lines": 91
+    },
+    {
+      "file": "src/preload.js",
+      "bytes": 123288,
+      "lines": 25
+    },
+    {
+      "file": "src/ProxyManager.js",
+      "bytes": 812,
+      "lines": 36
+    },
+    {
+      "file": "src/style.css",
+      "bytes": 25377,
+      "lines": 1278
+    },
+    {
+      "file": "src/slot-actions-main.js",
+      "bytes": 1565,
+      "lines": 24
+    },
+    {
+      "file": "src/slot-actions-ui.js",
+      "bytes": 1509,
+      "lines": 27
+    },
+    {
+      "file": "src/tornado-features-main.js",
+      "bytes": 1657,
+      "lines": 37
+    },
+    {
+      "file": "src/tornado-features-ui.js",
+      "bytes": 3202,
+      "lines": 67
+    },
+    {
+      "file": "src/tornado-error-reload-ui.js",
+      "bytes": 1937,
+      "lines": 40
+    },
+    {
+      "file": "src/minute-divider.js",
+      "bytes": 6256,
+      "lines": 93
+    },
+    {
+      "file": "src/minute-divider-ui.js",
+      "bytes": 542,
+      "lines": 13
+    },
+    {
+      "file": "src/startup-options-ui.js",
+      "bytes": 411,
+      "lines": 8
+    },
+    {
+      "file": "src/startup-options-main.js",
+      "bytes": 731,
+      "lines": 11
+    },
+    {
+      "file": "src/country-main.js",
+      "bytes": 871,
+      "lines": 17
+    },
+    {
+      "file": "src/country-storage.js",
+      "bytes": 1473,
+      "lines": 29
+    },
+    {
+      "file": "src/country-ui.js",
+      "bytes": 2886,
+      "lines": 45
+    },
+    {
+      "file": "src/country-ui.css",
+      "bytes": 2383,
+      "lines": 22
+    },
+    {
+      "file": "src/site-error-main.js",
+      "bytes": 999,
+      "lines": 14
+    },
+    {
+      "file": "src/site-error-ui.js",
+      "bytes": 67,
+      "lines": 2
+    },
+    {
+      "file": "src/auto-otp-main.js",
+      "bytes": 4542,
+      "lines": 72
+    },
+    {
+      "file": "src/recaptcha-settings-main.js",
+      "bytes": 1213,
+      "lines": 20
+    },
+    {
+      "file": "src/recaptcha-settings-ui.js",
+      "bytes": 1092,
+      "lines": 25
+    },
+    {
+      "file": "src/local-services-main.js",
+      "bytes": 3622,
+      "lines": 51
+    },
+    {
+      "file": "src/local-services-ui.js",
+      "bytes": 1148,
+      "lines": 27
+    }
+  ]
+}

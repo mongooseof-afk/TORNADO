@@ -1,0 +1,148 @@
+{
+  "version": "2.0.18",
+  "launcher": "1.8.53",
+  "protocol": "2.0.18",
+  "passed": true,
+  "standaloneTests": 12,
+  "clock": {
+    "passed": true,
+    "localInitialTime": true,
+    "minuteCadence": true,
+    "noCatchupBursts": true,
+    "restoreAnchor": true,
+    "stopInvalidatesQueuedCallbacks": true,
+    "pastFreshTimeIsTomorrow": true
+  },
+  "idleStates": {
+    "passed": true,
+    "countries": [
+      "Morocco",
+      "Mauritania"
+    ],
+    "emptyDelayIdle": true,
+    "configuredDelaySends": true,
+    "clearedDelayStops": true,
+    "emptySecEnabledIdle": true,
+    "bothOffDisabled": true,
+    "disableCancelsPending": true,
+    "manualRetryIndependent": true,
+    "popupAllowsEmptyTime": true,
+    "noRequestNotices": true,
+    "liveBlsRequestsSent": 0
+  },
+  "panel": {
+    "passed": true,
+    "countries": [
+      "Morocco",
+      "Mauritania"
+    ],
+    "queryOnlyDoesNotShowPanel": true,
+    "emptyResponseAloneDoesNotShowPanel": true,
+    "noAutoBeforeNativeState": true,
+    "logo": true,
+    "noDelayTimerTitleOrHide": true,
+    "trustedHiddenCheck": true,
+    "duplicateRejection": true,
+    "cooldown": true,
+    "nativeRemovalRemovesPanel": true
+  },
+  "launcherChangedFiles": [
+    "package.json",
+    "src/spain-new-config.json",
+    "src/spain-new-core.js",
+    "src/spain-new-ui.js",
+    "src/spain-new.css",
+    "src/mauritania-config.json",
+    "src/mauritania-core.js",
+    "src/mauritania-main.js",
+    "src/mauritania-ui.js",
+    "src/mauritania.css",
+    "src/spain-new-adapter.js"
+  ],
+  "liveBlsRequestsSent": 0,
+  "liveAcceptancePending": true,
+  "livenessValidated": false,
+  "country": "Mauritania",
+  "nativeElectron": {
+    "passed": true,
+    "emptyTimeEnabledIdle": true,
+    "noOperationNotices": true,
+    "clearTimeCancelsSchedule": true,
+    "bothOffDisabled": true,
+    "legacyCardLayout": true,
+    "greenSetRedStop": true,
+    "switchWorksWithoutReload": true,
+    "exclusiveModes": true,
+    "stopWithInvalidDirtyInput": true,
+    "persistedAnchor": 1792711537250,
+    "layout": {
+      "a": {
+        "x": 42,
+        "y": 91,
+        "width": 171,
+        "height": 34
+      },
+      "b": {
+        "x": 217,
+        "y": 91,
+        "width": 171,
+        "height": 34
+      },
+      "c": {
+        "x": 42,
+        "y": 129,
+        "width": 171,
+        "height": 39
+      },
+      "d": {
+        "x": 217,
+        "y": 129,
+        "width": 171,
+        "height": 39
+      }
+    },
+    "restoredAnchor": 1792711537250,
+    "reloadRestore": true,
+    "country": "Mauritania",
+    "electron": "38.2.2"
+  },
+  "scheduledProfiles": {
+    "passed": true,
+    "exactStartAndMinuteTicks": true,
+    "profileStaggering": true,
+    "modeExclusion": true,
+    "noIntervalBeforeStart": true,
+    "stopCancelsQueuedProfiles": true,
+    "manualAfterStop": true,
+    "country": "Mauritania",
+    "profiles": 2,
+    "eligibleTabs": 4,
+    "actualHiddenTabs": 0,
+    "hiddenBranchTestedSeparately": true,
+    "eachTabExactlyOnce": true,
+    "wrongPagesUntouched": true,
+    "noDocumentReload": true,
+    "overlapProtected": true,
+    "duplicateIdsIgnored": true,
+    "countryGuard": true,
+    "verificationPauseHonored": true,
+    "cooldownHonored": true,
+    "directGetHeadersPreserved": true
+  },
+  "nativeReact": {
+    "passed": true,
+    "actualCapturedReactBookingPage": true,
+    "nativeEmptyStateOnly": true,
+    "oneNativeDraftSubmit": true,
+    "retryAllNativeHttp200": true,
+    "noDocumentReload": true,
+    "noDuplicateDraft": true,
+    "noDraftDeletion": true,
+    "minimalLogoPanel": true,
+    "nativeClosePreserved": true,
+    "narrowNoOverflow": true,
+    "errors": []
+  },
+  "stableIdentityAndPermissions": true,
+  "noBookingStepNotices": true
+}

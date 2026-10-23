@@ -1,0 +1,679 @@
+{
+  "legacyVersion": "1.8.34",
+  "newLauncher": "1.8.49",
+  "newExtension": "2.0.14",
+  "review": "source extraction, syntax parsing, UI/control inventory, modular handler review and explicit new-binding comparison; not a claim that all old controls have been ported",
+  "files": [
+    {
+      "file": "index.html",
+      "bytes": 28852,
+      "lines": 595,
+      "sha256": "4bdab0a1c38b54e41d50bbbdf875fefae24010f4ddd290208b10478ea95b53aa"
+    },
+    {
+      "file": "src/index.js",
+      "bytes": 1299694,
+      "lines": 1,
+      "sha256": "338ff67c32ccfe5f7917b9e910af9e06729159f77c4095c9d95806c93a81d108",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/main.js",
+      "bytes": 29081,
+      "lines": 812,
+      "sha256": "3eba5a15b4d674f58add41ec4ec9105bdb2915343ba96137c82349bfc9da12bd",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/manage.js",
+      "bytes": 402955,
+      "lines": 1,
+      "sha256": "edbe0e07b6902100013bd06078b8594da85af53058ca77643518fb7a0a2a5d13",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/ocr_captchaai.js",
+      "bytes": 4316,
+      "lines": 122,
+      "sha256": "7a1e0ebae91086853be3ec8481bd598f7a0d8c413ea83e703c6b513dd697743a",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/otp.js",
+      "bytes": 5002,
+      "lines": 194,
+      "sha256": "3776df31d03373f3fa8a1526859cbd5fc9fa0d2b0f3fcb09fc84c7ab760b5ed4",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/patch_captchaai.js",
+      "bytes": 4774,
+      "lines": 110,
+      "sha256": "72cb9b3d93c062748f5792ea6dbd1af4f605c08f53ba4d5090336343a5e5991e",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/patch.js",
+      "bytes": 3353,
+      "lines": 91,
+      "sha256": "d451adf88c817600340b65e7867a81409f015e7bf11db09c69fea05dd72be8ca",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/preload.js",
+      "bytes": 123288,
+      "lines": 25,
+      "sha256": "90adbd703b84930da9c44550a0cec91b8d965ff07af3a1ecb6f817c690741df4",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/ProxyManager.js",
+      "bytes": 812,
+      "lines": 36,
+      "sha256": "77f8e76848f076838d47b765e97e093234d492e7e0d9c057999ce90e64e29b8e",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/style.css",
+      "bytes": 25377,
+      "lines": 1278,
+      "sha256": "5db25182bff917724f9dc7668b55aa4a4e9b2ebc7ba61a29985572ddeddee401"
+    },
+    {
+      "file": "src/slot-actions-main.js",
+      "bytes": 1565,
+      "lines": 24,
+      "sha256": "05883405ebcbfd2c4a46feec16a358a3a764a997f388cff3152791867b45b12e",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/slot-actions-ui.js",
+      "bytes": 1509,
+      "lines": 27,
+      "sha256": "daa5833cec69dfa002532e23965c31a79c7daddead830621d5c18a00c4d0c909",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/tornado-features-main.js",
+      "bytes": 1657,
+      "lines": 37,
+      "sha256": "983f2e82b10d550dfb024cca4296473ff2881c48c2de1c97426c154dc08e991e",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/tornado-features-ui.js",
+      "bytes": 3202,
+      "lines": 67,
+      "sha256": "e4f707b44762033bcb9efea06257a76dd779c46c5ea45171c13c8f7fa330afd3",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/tornado-error-reload-ui.js",
+      "bytes": 1937,
+      "lines": 40,
+      "sha256": "8347c399f95dfc155c946e590bd71144146da1e2961b61441de7ae96e9a616d7",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/minute-divider.js",
+      "bytes": 6256,
+      "lines": 93,
+      "sha256": "4f43d80fd09a443cd5c5197c0c338ecc43996d8d0f187c4e2ae0a5e3e5a7d7a7",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/minute-divider-ui.js",
+      "bytes": 542,
+      "lines": 13,
+      "sha256": "81bba8846757d8e8125b3114f23ae73db40591ab9688c6cbeaa52df9289ec3eb",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/startup-options-ui.js",
+      "bytes": 411,
+      "lines": 8,
+      "sha256": "9ab197405431edfb061572083ff002b3f5cc78529ff7e6a2cf05629e6d2611c2",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/startup-options-main.js",
+      "bytes": 731,
+      "lines": 11,
+      "sha256": "dd202fbeca5b99b4e5a98dfca1245b57fdcd3469a8ef9cf6188501f3f1c60246",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/country-main.js",
+      "bytes": 871,
+      "lines": 17,
+      "sha256": "e1ccba63efb375ff16feed4db43ce2f7155495c28de79a52228fc43d6a29535d",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/country-storage.js",
+      "bytes": 1473,
+      "lines": 29,
+      "sha256": "b742ba4d27a98e2a0a3763ba53e282e03b66abaa48194df2718522c98477ccb5",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/country-ui.js",
+      "bytes": 2886,
+      "lines": 45,
+      "sha256": "8d64a730a7dded7d7128257467496a9fd3e1da19e76d30aec77a50a6efeeaf8b",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/country-ui.css",
+      "bytes": 2383,
+      "lines": 22,
+      "sha256": "a1853a5dd1478a1d05c1efabe9ad35fd1be500e66befe40c59f3fadac0fd7eb9"
+    },
+    {
+      "file": "src/site-error-main.js",
+      "bytes": 999,
+      "lines": 14,
+      "sha256": "fb29c88e70d4323bc49c2d149d9734198e2d656d209362ffbd17c5585214ef0c",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/site-error-ui.js",
+      "bytes": 67,
+      "lines": 2,
+      "sha256": "94272c89af1766545a0d0c22257b2f17012b828c835f6e08d2fe3f3ea952569c",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/auto-otp-main.js",
+      "bytes": 4542,
+      "lines": 72,
+      "sha256": "53a94ba6988188432447600d95d1e3fd32a958641cc845e3e8dfb961b2c1b18c",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/recaptcha-settings-main.js",
+      "bytes": 1213,
+      "lines": 20,
+      "sha256": "65d41f3c3aae1cf6d78baeb26f14abfd5ec8bf675585f9c20de4fd4e5b461cc3",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/recaptcha-settings-ui.js",
+      "bytes": 1092,
+      "lines": 25,
+      "sha256": "f8ea66a02dc737f1da8a9a366664fef18f715a1dd9238f6c5fc167dd70001546",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/local-services-main.js",
+      "bytes": 3622,
+      "lines": 51,
+      "sha256": "78485e36d7fc40ad2962f22e1eb0e0203f9fd8f9fff30f1281bab10368e48bda",
+      "syntaxParsed": true
+    },
+    {
+      "file": "src/local-services-ui.js",
+      "bytes": 1148,
+      "lines": 27,
+      "sha256": "6efb53424874a5605f79381fd18039c1545ee39e080c07ffe748a2355e3068f7",
+      "syntaxParsed": true
+    }
+  ],
+  "controls": [
+    {
+      "id": "submitBtn",
+      "label": "Submit Slot",
+      "status": "pending",
+      "note": "Manual Submit Slot needs a new-protocol launcher command and a native selected-slot guard. Automatic submission already exists.",
+      "legacySource": "src/slot-actions-ui.js",
+      "line": 4
+    },
+    {
+      "id": "loginBtn",
+      "label": "Go Login",
+      "status": "ready",
+      "note": "Go Login is routed to /login for the selected country.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "startBtn",
+      "label": "Start New App",
+      "status": "equivalent",
+      "note": "New App is available in the toolbar and Retry; the separate launcher button was removed at the earlier user request.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "reloginBtn",
+      "label": "Relogin",
+      "status": "pending",
+      "note": "Old logout/re-login semantics need a new native authentication lifecycle adapter.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "changeProxyBtn",
+      "label": "Change Proxy",
+      "status": "partial",
+      "note": "Validated proxies are supported through On Max Attempts; the separate bulk manual button is not connected to the new helper. Security verification never triggers proxy rotation.",
+      "legacySource": "src/ProxyManager.js",
+      "line": null
+    },
+    {
+      "id": "changeIpBtn",
+      "label": "Change IP",
+      "status": "pending",
+      "note": "Old provider-specific Change IP command is not connected to the new helper. It must not be used to bypass security verification.",
+      "legacySource": "src/ProxyManager.js",
+      "line": null
+    },
+    {
+      "id": "superRefreshBtn",
+      "label": "Super Refresh",
+      "status": "pending",
+      "note": "Legacy refresh is MONGOOSE_SLOT_ACTION refresh. New-site SPA booking/liveness guards require adaptation before exposing it.",
+      "legacySource": "src/slot-actions-ui.js",
+      "line": 2
+    },
+    {
+      "id": "changeDaysBtn",
+      "label": "Change Days",
+      "status": "pending",
+      "note": "Legacy change-day command; needs a native new-calendar adapter.",
+      "legacySource": "src/slot-actions-ui.js",
+      "line": 2
+    },
+    {
+      "id": "clearDaysBtn",
+      "label": "Clear Days",
+      "status": "pending",
+      "note": "Legacy clear-days command; the new React calendar has different selection state.",
+      "legacySource": "src/slot-actions-ui.js",
+      "line": 2
+    },
+    {
+      "id": "stopInVisaTypeBtn",
+      "label": "Submit Visatype",
+      "status": "equivalent",
+      "note": "The new site has no old VisaType page. Auto Book Appointment covers the pre-calendar native flow; old stop-toggle semantics are not identical.",
+      "legacySource": "src/slot-actions-ui.js",
+      "line": 2
+    },
+    {
+      "id": "submitPreSlotBtn",
+      "label": "Submit Pre Slot",
+      "status": "ready",
+      "note": "Submit Pre Slot opens the current-country Retry route.",
+      "legacySource": "src/slot-actions-ui.js",
+      "line": 2
+    },
+    {
+      "id": "reloadSessionBtn",
+      "label": "Reload Session",
+      "status": "pending",
+      "note": "Requires stage-aware login navigation excluding calendar, verification and payment, which share SPA URLs.",
+      "legacySource": "src/slot-actions-ui.js",
+      "line": 2
+    },
+    {
+      "id": "autoLoginToggle",
+      "label": "Auto Login",
+      "status": "ready",
+      "note": "Native login form filling, selected account persistence and successful SPA login-to-account regression tested.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoCaptchaToggle",
+      "label": "Auto Captcha",
+      "status": "native",
+      "note": "The new portal keeps its native verification. The old numeric-image solver is not a replacement for new-site verification.",
+      "legacySource": "src/ocr_captchaai.js",
+      "line": null
+    },
+    {
+      "id": "autoVTToggle",
+      "label": "Auto Visa Type",
+      "status": "equivalent",
+      "note": "Auto Book Appointment: native primary applicant / Individual flow. Family automation is not complete.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoSubmitSlot",
+      "label": "Auto Submit Slot",
+      "status": "ready",
+      "note": "Auto Submit Calendar uses native available date, earliest time and one confirmation. Random/First/Last date modes.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoRedirectToggle",
+      "label": "Auto Retry Calendar",
+      "status": "ready",
+      "note": "Auto Retry Calendar and configurable Delay; blank Delay holds.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoSlotSecToggle",
+      "label": "Auto Retry Calendar /Sec",
+      "status": "equivalent",
+      "note": "Delay in seconds covers interval retries; old separate Sec toggle is not exposed. Exact-second targeting is a separate pending feature.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoProxyRotate",
+      "label": "Auto Proxy Rotation",
+      "status": "partial",
+      "note": "Only the explicit On Max Attempts proxy action is implemented for the new helper.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoReloadErrorToggle",
+      "label": "Auto Reload Error Occurred",
+      "status": "partial",
+      "note": "Calendar transient failures already back off. The separate old generic-page switch/delay has not been ported.",
+      "legacySource": "src/tornado-error-reload-ui.js",
+      "line": 37
+    },
+    {
+      "id": "siteErrorReloadToggle",
+      "label": "Auto Reload Site Errors",
+      "status": "partial",
+      "note": "New Retry respects transient errors, 401/403 and 429. Broad page/POST automatic reloading is not ported.",
+      "legacySource": "src/site-error-main.js",
+      "line": null
+    },
+    {
+      "id": "autoDivideMinutesToggle",
+      "label": "Minute Distribution",
+      "status": "pending",
+      "note": "The old minute-divider accepts Spain/Portugal and TORNADO_MINUTE messages; new channels need readiness, scheduling and cancel integration.",
+      "legacySource": "src/minute-divider.js",
+      "line": null
+    },
+    {
+      "id": "autoSubmitSlotSignal",
+      "label": "Signal Submit - Calendrie",
+      "status": "pending",
+      "note": "New helper needs a native manual-submit command for the launcher signal.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoSubmitRetryCalendrieSignal",
+      "label": "Signal Submit - Retry Calendrie",
+      "status": "pending",
+      "note": "Local manual Retry exists; the legacy bulk signal is not integrated.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoSubmitVisatypeSignal",
+      "label": "Signal Submit - Visatype",
+      "status": "equivalent",
+      "note": "No old VisaType route exists; equivalent action needs explicit new booking semantics.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "autoAlert",
+      "label": "Signal Alert 🔔",
+      "status": "pending",
+      "note": "Legacy alert sound/notification requires a new available-slots notification adapter.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "darkModeToggle",
+      "label": "Dark Mode Launcher",
+      "status": "ready",
+      "note": "The original launcher theme switch is now visible under Secondary for both new countries.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "recaptchaToken",
+      "label": "Recaptcha Token",
+      "status": "native",
+      "note": "Do not replay old tokens into the new verification system. New-site verification remains controlled by the website.",
+      "legacySource": "src/recaptcha-settings-main.js",
+      "line": null
+    },
+    {
+      "id": "refreshRecaptcha",
+      "label": "",
+      "status": "native",
+      "note": "Old token refresh behavior does not map to a documented new-site action.",
+      "legacySource": "src/recaptcha-settings-main.js",
+      "line": null
+    },
+    {
+      "id": "center",
+      "label": "Center",
+      "status": "ready",
+      "note": "Advanced Centre criterion, checked against the saved applicant; Mauritania only Nouadhibou. Applicant edits remain manual.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "visaType",
+      "label": "Visa Type",
+      "status": "ready",
+      "note": "Advanced Visa Type criterion, checked against saved applicant.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "category",
+      "label": "Category",
+      "status": "native",
+      "note": "Removed at the earlier user request; appointment type/category remains a native calendar choice.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "members",
+      "label": "Members",
+      "status": "partial",
+      "note": "Advanced member count is saved; automatic Individual uses one primary applicant. Family selection remains manual.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "updateData",
+      "label": "Update",
+      "status": "ready",
+      "note": "Advanced Update saves scoped Centre/Visa Type/Members criteria.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "onMaxAttemptAction",
+      "label": "On Max Attempts :",
+      "status": "ready",
+      "note": "Stop/New App/Switch Proxy, once per reached limit, after server cooldown.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "getProxyFrom",
+      "label": "Proxy From :",
+      "status": "partial",
+      "note": "Uses valid proxies supplied by Manage > Proxy. Separate old source selector is not migrated.",
+      "legacySource": "src/ProxyManager.js",
+      "line": null
+    },
+    {
+      "id": "delayOnSecRc",
+      "label": "Delay (seconds) :",
+      "status": "ready",
+      "note": "Delay seconds 1–120 or empty; empty disables automatic calendar requests.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "maxAttemptsRc",
+      "label": "Attemps (value) :",
+      "status": "ready",
+      "note": "Attempt limit remains in Launcher; deliberately removed from Retry panel.",
+      "legacySource": "src/index.js",
+      "line": null
+    },
+    {
+      "id": "errorReloadDelaySeconds",
+      "label": "Delay Reload Error Occurred (seconds) :",
+      "status": "pending",
+      "note": "Separate old Error Occurred delay is not connected to the new helper.",
+      "legacySource": "src/tornado-error-reload-ui.js",
+      "line": 37
+    },
+    {
+      "id": "siteErrorReloadDelaySeconds",
+      "label": "Auto Refresh On Errors (seconds) :",
+      "status": "pending",
+      "note": "Separate old site error refresh delay is not connected to the new helper.",
+      "legacySource": "src/site-error-main.js",
+      "line": null
+    },
+    {
+      "id": "start-time",
+      "label": "start-time",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "start-time-delay",
+      "label": "delay in ms",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "update-slot-values",
+      "label": "Set",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "stop-slot",
+      "label": "Stop",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": 620
+    },
+    {
+      "id": "start-time-r",
+      "label": "start-time-r",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "start-time-delay-r",
+      "label": "delay in ms",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "update-r-values",
+      "label": "Set",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "stop-r",
+      "label": "Stop",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": 643
+    },
+    {
+      "id": "start-time-action",
+      "label": "start-time-action",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "start-time-delay-action",
+      "label": "delay in ms",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "update-action-values",
+      "label": "Set",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "stop-action",
+      "label": "Stop",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": 636
+    },
+    {
+      "id": "start-time-relogin",
+      "label": "start-time-relogin",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "start-time-delay-relogin",
+      "label": "delay in ms",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "update-relogin-values",
+      "label": "Set",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": null
+    },
+    {
+      "id": "stop-relogin",
+      "label": "Stop",
+      "status": "pending",
+      "note": "Legacy scheduler needs a new-country command adapter and stage/clock/cancellation tests.",
+      "legacySource": "src/main.js",
+      "line": 643
+    }
+  ],
+  "summary": {
+    "ready": 12,
+    "equivalent": 5,
+    "partial": 6,
+    "pending": 29,
+    "native": 4
+  }
+}

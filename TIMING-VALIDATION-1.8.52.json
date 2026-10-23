@@ -1,0 +1,136 @@
+{
+  "version": "1.8.52",
+  "helperVersion": "2.0.17",
+  "passed": true,
+  "changedPackageFiles": [
+    "package.json",
+    "src/spain-new-ui.js",
+    "src/spain-new.css",
+    "src/mauritania-ui.js",
+    "src/mauritania.css"
+  ],
+  "launcherOnly": true,
+  "liveBlsRequestsSent": 0,
+  "apkChanged": false,
+  "gmailChanged": false,
+  "moroccoTiming": {
+    "passed": true,
+    "firstEnableOpensTiming": true,
+    "visibleValidation": true,
+    "heartbeatPreservesFeedback": true,
+    "legacyCardLayout": true,
+    "greenSetRedStop": true,
+    "switchWorksWithoutReload": true,
+    "exclusiveModes": true,
+    "stopWithInvalidDirtyInput": true,
+    "persistedAnchor": 1792700994250,
+    "layout": {
+      "a": {
+        "x": 42,
+        "y": 91,
+        "width": 171,
+        "height": 34
+      },
+      "b": {
+        "x": 217,
+        "y": 91,
+        "width": 171,
+        "height": 34
+      },
+      "c": {
+        "x": 42,
+        "y": 129,
+        "width": 171,
+        "height": 39
+      },
+      "d": {
+        "x": 217,
+        "y": 129,
+        "width": 171,
+        "height": 39
+      }
+    },
+    "restoredAnchor": 1792700994250,
+    "reloadRestore": true,
+    "country": "SpainNew",
+    "electron": "38.2.2"
+  },
+  "mauritaniaTiming": {
+    "passed": true,
+    "firstEnableOpensTiming": true,
+    "visibleValidation": true,
+    "heartbeatPreservesFeedback": true,
+    "legacyCardLayout": true,
+    "greenSetRedStop": true,
+    "switchWorksWithoutReload": true,
+    "exclusiveModes": true,
+    "stopWithInvalidDirtyInput": true,
+    "persistedAnchor": 1792700996250,
+    "layout": {
+      "a": {
+        "x": 42,
+        "y": 91,
+        "width": 171,
+        "height": 34
+      },
+      "b": {
+        "x": 217,
+        "y": 91,
+        "width": 171,
+        "height": 34
+      },
+      "c": {
+        "x": 42,
+        "y": 129,
+        "width": 171,
+        "height": 39
+      },
+      "d": {
+        "x": 217,
+        "y": 129,
+        "width": 171,
+        "height": 39
+      }
+    },
+    "restoredAnchor": 1792700996250,
+    "reloadRestore": true,
+    "country": "Mauritania",
+    "electron": "38.2.2"
+  },
+  "moroccoRegression": {
+    "passed": true,
+    "timingSetStopAndPersistence": true,
+    "exclusiveModes": true,
+    "retryAllNativeButton": true,
+    "delayAndAutoCancelControls": true,
+    "advancedSettings": true,
+    "bookingIpcAndUi": true,
+    "policyIpcAndPersistence": true,
+    "retryIpcAndUi": true,
+    "darkTheme": true,
+    "checkboxAndNativeIpc": true,
+    "accountSync": true,
+    "legacyControlsHidden": true,
+    "batchCalls": 1,
+    "navigationCalls": 0,
+    "electron": "38.2.2"
+  },
+  "mauritaniaRegression": {
+    "passed": true,
+    "timingSetStopAndPersistence": true,
+    "exclusiveModes": true,
+    "retryAllNativeButton": true,
+    "delayAndAutoCancelControls": true,
+    "advancedSettings": true,
+    "bookingIpcAndUi": true,
+    "policyIpcAndPersistence": true,
+    "retryIpcAndUi": true,
+    "darkTheme": true,
+    "checkboxAndNativeIpc": true,
+    "accountSync": true,
+    "legacyControlsHidden": true,
+    "batchCalls": 1,
+    "navigationCalls": 0,
+    "electron": "38.2.2"
+  }
+}

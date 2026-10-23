@@ -1,0 +1,7 @@
+html[data-launcher-theme=dark]{color-scheme:dark}
+html[data-launcher-theme=light]{color-scheme:light}
+.dark-mode .spain-new-empty{color:#c2bec5}
+.dark-mode #spain-new-status{color:#e1bac8}
+.dark-mode #tornado-country-error{background:#35232c;color:#f0c5d3;border-color:#65404d}
+.dark-mode #tornado-country-error:not(:empty)::before{background:#613345;color:#ffd5df}
+.dark-mode #tornado-profile-display{background:var(--panel-bg);color:var(--text-color)}

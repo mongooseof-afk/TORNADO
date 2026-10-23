@@ -1,0 +1,11 @@
+[
+  { "type": "All Types", "id": "", "code": "" , "value": "" },
+  { "type": "Casa 1", "id": "c6c05a56-38d7-4929-8b3d-77a2280d9c20", "code": "SCHENGEN_VISA_CASA_ONE" , "value": "Casa_1" },
+  { "type": "Casa 2", "id": "5e43f8e9-cb93-42f6-8350-9d8e2e79a42d", "code": "SCHENGEN_VISA_CASA_TWO" , "value": "Casa_2" },
+  { "type": "Casa 3", "id": "889bd811-ae40-4507-93f3-cc1486c0f282", "code": "SCHENGEN_VISA_CASA_THREE" , "value": "Casa_3" },
+  { "type": "Schengen Visa", "id": "c805c157-7e8f-4932-89cf-d7ab69e1af96", "code": "SCHENGEN_VISA" , "value": "Schengen_Visa" },
+  { "type": "National Visa", "id": "fb33a698-a3bd-4b02-8ef7-b589775187df", "code": "NATIONAL_VISA" , "value": "National_Visa" },
+  { "type": "Student Visa", "id": "Student_Visa", "code": "STUDENT_VISA" , "value": "Student_Visa" },
+  { "type": "Family Reunification Visa", "id": "Family_Reunification_Visa", "code": "FAMILY_REUNIFICATION" , "value": "Family_Reunification_Visa" },
+  { "type": "Work Visa", "id": "Work_Visa", "code": "WORK_VISA" , "value": "Work_Visa" }
+]

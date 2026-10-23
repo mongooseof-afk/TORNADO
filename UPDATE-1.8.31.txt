@@ -1,0 +1,22 @@
+Tornado Spain 1.8.51 / Portugal 1.8.39 / Launcher 1.8.31
+
+Time Left:
+Restored the slim full-width line with the countdown on the right. The corrected UTC server-deadline logic stays in use in both countries. Retry/pre-slot gets the same full-width line below the fixed Login/New App toolbar, including narrow screens.
+
+OTHERS:
+1. Delay Reload Error Occurred (seconds)
+2. Auto Refresh On Errors (seconds) -- 500/502/503/504 and Application Temporarily Unavailable.
+Separate switches, inputs and values. Empty means 2 seconds, range hint 1-120; there is no Default text. Both error options are available for Spain and Portugal and start OFF with a new launcher process.
+
+Automatic ApplicantSelection OTP:
+Reviewed JEXI's loadManage/requestOtpCode behavior: start retrieving on page arrival, poll for completion and fill the code. Tornado now starts this automatically and removes Check OTP. Submit Application stays manual.
+Tornado uses the existing account's Gmail App Password and the local Launcher's direct Gmail IMAP connection, rather than JEXI's remote job endpoint. No fixed 20-second wait. The reader waits up to about 70 seconds for a recent matching email, and stops on navigation/disconnect. Manual entry remains available and is never overwritten. Sender, subject, recipient, recency and six-digit-code checks apply; ambiguous unlabeled codes are not filled. Reading does not mark unrelated emails as read.
+The password is selected from the stored profile account by the extension background. It is not sent to the BLS page, JEXI or another relay service. IMAP authentication goes to imap.gmail.com using TLS.
+
+Install all three updated components. Close the old launcher and start 1.8.31, choose the country, then sync/update the accounts with their saved Gmail App Passwords. Load the matching extension directory using chrome://extensions > Load unpacked; confirm its version and reload BLS pages. Keep the launcher connected while retrieving OTP.
+
+Validation:
+Local checks passed for both country routes, countdown parsing/cache/Retry recovery, slim desktop/mobile layouts, two independent settings and labels/order, native account-manager country separation and actual app-password field, native launcher routing, authenticated socket reuse, OTP fill/manual-submit behavior, delayed and invalid mail, timeout, duplicate jobs, disconnect/navigation cancellation and sanitized errors. Packaged IMAP API signatures and ASAR hashes were checked.
+No live Gmail mailbox was accessed and no live appointment was submitted. Live mail delivery depends on the saved Gmail App Password and Gmail IMAP availability.
+
+Accounts, saved clients, country separation, proxies, existing booking handlers and APK are retained.

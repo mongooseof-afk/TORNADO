@@ -1,0 +1,31 @@
+Tornado Launcher 1.8.33
+
+CHANGES
+- Recaptcha Token saves automatically when edited. Clearing the field saves an empty value, including after closing and reopening Launcher. Existing saved values are migrated locally. Other startup option switches still start OFF.
+- Markhor Key and its solver path are removed. Optional CaptchaAI remains available in Spain; local ONNX CAPTCHA is tried first.
+- Stop in VisaType is renamed Submit Visatype. As explicitly requested, this is a label change: the button still turns Auto Visa Type OFF. Submit Pre Slot retains its previous behavior.
+- Removed the 502 / 503 / Application Temporarily Unavailable description beneath Auto Refresh On Errors.
+
+ONE LAUNCHER
+The local services previously started by three LEGENDS terminals now run inside one hidden child process managed by Launcher:
+  3000  Window arrangement / local profile commands
+  8766  Submit Timer, Mass Set, Mass Stop, Portugal Extra tries / Interval
+  3001  Local ONNX CAPTCHA and the existing local signal/sync endpoints
+They start with Launcher and stop with it. Their states appear in Settings > Others > Local services. Native inference dependencies and the model are included; no separate Node.js/Python installation or terminal startup is needed.
+
+The local CAPTCHA model and preprocessing come from the existing LEGENDS local server. Tornado's existing Auto Captcha option sends its normal OCR jobs through this bundled service. Enable Auto Captcha when needed. Optional configured CaptchaAI is a fallback if the local service is unavailable. No Markhor or legacy Python/vendor OCR fallback is used.
+
+INSTALL
+1. Close the previous Launcher and the three old LEGENDS server terminals, so their ports are free.
+2. Keep this entire folder, including resources/local-services. Run Tornado.exe from it.
+3. Choose Spain or Portugal and enable the options you need.
+4. Existing Tornado Spain 1.8.54 / Portugal 1.8.42 extensions remain compatible; this update does not require replacing them or the APK.
+
+Do not run a second server on the same ports. A busy port is reported in Local services; Launcher does not terminate another program to take its port.
+
+VALIDATION
+- Save, clear and restart persistence; rejection of invalid IPC senders; startup switches and country separation.
+- Three-service startup, window arrangement, Mass Set / Mass Stop, Portugal 3 extra tries at 19 ms, model loading/inference and port release on shutdown.
+- The packaged Electron 38.2.2 runtime successfully ran the managed utility process, loaded the native inference libraries and returned OCR results.
+- Service tests used alternate loopback ports because 3000/8766 were restricted and 3001 was occupied in the test environment. Production defaults remain 3000/8766/3001.
+- OCR inputs were synthetic images. These checks verify integration and model execution; they do not establish live BLS recognition accuracy. No live booking, CAPTCHA or biometric capture was submitted.

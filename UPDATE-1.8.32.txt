@@ -1,0 +1,13 @@
+Tornado Launcher 1.8.32
+
+Settings has two new controls for Spain and Portugal:
+
+STOP IN VISATYPE sends Auto Visa Type OFF to all currently connected profiles for the selected country. The OFF state is also sent to profiles that reconnect during this Launcher run. Profiles can remain on VisaType with their selected form values.
+
+SUBMIT PRE SLOT now acts on a ready VisaType page, as well as on the existing Retry Calendar page. It presses the native page Submit button once. The user can enable Auto Visa Type again using its regular switch.
+
+RELOAD SESSION clears only the current country's BLS cookies in each eligible Chrome profile, then returns its Login, NewAppointment, VisaType, AppointmentCaptcha or Retry Calendar tab to Login. It does not rotate or change proxies. If any SlotSelection, ApplicantSelection, Liveness or Payment tab is open in that Chrome profile, the whole profile is skipped so its booking session stays intact.
+
+Install Spain 1.8.54 or Portugal 1.8.42 in each Chrome profile, close the old Launcher, then run this version. Choose the country in Launcher before using these controls. Accounts and saved settings are preserved according to the existing Launcher behavior.
+
+The Chrome selfie extension 1.0.1 still uses a four-digit code and opens the camera in its current tab. The APK is unchanged.

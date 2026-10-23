@@ -1,0 +1,17 @@
+{
+  "launcher": "1.8.54",
+  "helpers": "2.0.20",
+  "mailboxMatching": true,
+  "workerAccountAndSecurityGuards": true,
+  "chromiumFixtures": [
+    "SpainNew",
+    "Mauritania"
+  ],
+  "nativeElectronFixtures": [
+    "SpainNew",
+    "Mauritania"
+  ],
+  "existingTestsPassed": 24,
+  "liveMailboxTest": false,
+  "liveBlsTest": false
+}

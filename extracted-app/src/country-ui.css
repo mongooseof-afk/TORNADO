@@ -1,0 +1,23 @@
+.tornado-countries{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:12px 0 16px;}
+.tornado-country-card{display:flex;flex-direction:column;align-items:flex-start;gap:7px;border:1px solid #dce3ec;border-radius:14px;background:#fff;padding:15px;text-align:left;cursor:pointer;color:#263449;box-shadow:0 3px 12px #182b4007;transition:background .15s,border-color .15s;}
+.tornado-country-card[aria-pressed=true]{border:2px solid #ce1238;padding:14px;background:#fff6f8;box-shadow:0 0 0 3px #ce12380b;}
+.tornado-country-card:focus-visible{outline:2px solid #ce1238;outline-offset:3px;}
+.tornado-country-card svg{display:block;width:56px;height:38px;border-radius:6px;box-shadow:0 2px 7px #14283c18;overflow:hidden;}
+.tornado-country-card strong{font:750 15px/1.2 system-ui,sans-serif;}.tornado-country-card small{font:500 10px/1.3 system-ui,sans-serif;color:#6b778b;}
+.tornado-country-card:disabled{cursor:wait;opacity:.65;}
+#tornado-country-error{display:flex;align-items:center;gap:9px;margin:0 0 14px;padding:11px 13px;border:1px solid #efd8df;border-radius:11px;background:#fff6f8;color:#713549;font:500 12px/1.5 system-ui,sans-serif;}
+#tornado-country-error:empty{display:none;}
+#tornado-country-error:not(:empty)::before{content:"i";display:grid;place-items:center;flex:0 0 19px;height:19px;border-radius:50%;background:#f6dce4;color:#a81439;font-weight:750;}
+html[data-tornado-country=Portugal] .recaptcha-group{display:none!important;}
+.dark-mode .tornado-country-card{background:#24252b;border-color:#454852;color:#f3f4f7;}.dark-mode .tornado-country-card[aria-pressed=true]{background:#35232c;border-color:#ec3b60;}.dark-mode .tornado-country-card small{color:#a8afbd;}
+
+/* Site error settings are available for both countries. */
+#siteErrorReloadStatus:empty{display:none;}
+
+.input-item:has(#errorReloadDelaySeconds),.input-item:has(#siteErrorReloadDelaySeconds){display:grid;grid-template-columns:minmax(0,1fr) 70px;gap:6px 10px;align-items:center;}
+.input-item:has(#errorReloadDelaySeconds)>label,.input-item:has(#siteErrorReloadDelaySeconds)>label{min-width:0;line-height:1.4;}
+#errorReloadDelaySeconds,#siteErrorReloadDelaySeconds{width:70px;box-sizing:border-box;}
+#siteErrorDelayHint,#siteErrorReloadStatus,#errorOccurredReloadStatus{grid-column:1/-1;font-size:11px;line-height:1.4;}
+#siteErrorReloadStatus:empty,#errorOccurredReloadStatus:empty{display:none;}
+
+.tornado-country-card{padding:12px;min-width:0}.tornado-country-card[aria-pressed=true]{padding:11px}.tornado-country-card strong{font-size:13px}.tornado-country-card small{font-size:9px}

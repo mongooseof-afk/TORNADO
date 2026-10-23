@@ -1,0 +1,15 @@
+{
+  "launcher": "1.8.55",
+  "helpers": "2.0.22",
+  "classicAccountField": true,
+  "noSeparateCards": true,
+  "clientPhotoRoundTrip": true,
+  "imageBytesOutsideLocalStorage": true,
+  "countries": [
+    "SpainNew",
+    "Mauritania"
+  ],
+  "existingTests": 24,
+  "liveGmail": false,
+  "liveBls": false
+}

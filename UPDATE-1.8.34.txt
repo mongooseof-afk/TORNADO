@@ -1,0 +1,18 @@
+Tornado Launcher 1.8.34
+
+CHANGES
+- Removed the Local services card from Others. When Windows (3000), Submit Timer (8766) and the warmed CAPTCHA model (3001) are all ready, Logs receives: HH:MM:SS:SSS | Online Server Connected ✅
+- Readiness is logged once per successful connection/recovery, not on every status poll.
+- Submit Visatype now sends a manual Submit command to ready VisaType pages in the selected country, even when Auto Submit VisaType is OFF. It no longer changes the automatic option. Requires the matching new helper extension below.
+- Auto Captcha enabled after a CAPTCHA page has already opened now starts that challenge. Requests wait for the existing launcher connection to register; responses return only to their requesting document. Duplicate in-flight jobs are suppressed.
+- Local image decoding runs together while inference stays bounded. Removed the redundant 500 ms retry of identical no-match images. An unrecognized challenge returns an error instead of leaving the old loader waiting indefinitely.
+- Recaptcha Token save/clear behavior and saved accounts are preserved. Startup option switches still start OFF.
+
+INSTALL
+1. Close the previous Launcher, then run Tornado.exe from this entire folder. Keep resources beside the EXE.
+2. Load Tornado Spain 1.8.55 / Tornado Portugal 1.8.43 via chrome://extensions. Disable the older helper in that profile. Reload existing BLS pages after reloading the extension.
+3. Choose the country and enable Auto Captcha. No separate LEGENDS terminals are required. Avoid running old services on 3000/8766/3001 at the same time.
+
+VALIDATION
+Tests covered the real native ONNX runtime and Electron utility process, local window/timer services, manual VisaType submit and country filtering, late Auto Captcha activation, reconnect/duplicate handling, and real Chrome with both original helper result handlers. CAPTCHA images were synthetic local fixtures; no live appointments were submitted.
+Nine synthetic tiles produced the same 123..131 predictions before/after. A no-match request dropped from 596 ms to 47 ms in the local benchmark. Matching requests were already about 40 ms; no claim of improved live CAPTCHA accuracy is made.

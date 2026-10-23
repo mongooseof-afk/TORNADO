@@ -1,0 +1,1 @@
+{"name":"ThunderBolt","version":"1.8.55","description":"Tornado launcher with bundled local services","author":"t.me/thunderbolt_off","main":"src/main.js","dependencies":{"ws":"^8.16.0","imapflow":"^1.0.108","mailparser":"^3.6.5"},"productName":"Tornado"}
